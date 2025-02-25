@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/"/>
+    <meta charset="utf-8"/>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Roboto);
+      html, body {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        min-height: 100vh;
+        font-family: 'Roboto', sans-serif;
+      }
+      h1 {
+        margin: unset;
+        font-size: 4rem;
+      }
+    </style>
+    <!--$-->
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--/-->
+    <script src="pages/home.client.dart.js" defer></script>
+    <style>
+      .counter {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: flex;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-top-color: #01589B;
+        border-bottom-color: #01589B;
+        border-top-width: 2px;
+        border-bottom-width: 2px;
+        align-items: center;
+      }
+      .counter button {
+        display: flex;
+        width: 2em;
+        height: 2em;
+        border: unset;
+        border-radius: 2em;
+        cursor: pointer;
+        font-size: 2rem;
+        background-color: transparent;
+        justify-content: center;
+        align-items: center;
+      }
+      .counter button:hover {
+        background-color: #0001;
+      }
+      .counter span {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        box-sizing: border-box;
+        min-width: 2.5em;
+        color: #01589B;
+        font-size: 4rem;
+        text-align: center;
+      }
+      header {
+        padding: 1em;
+        display: flex;
+        justify-content: center;
+      }
+      header nav {
+        display: flex;
+        height: 3em;
+        border-radius: 10px;
+        overflow: clip;
+        background-color: #01589B;
+        justify-content: space-between;
+      }
+      header nav a {
+        padding-left: 2em;
+        padding-right: 2em;
+        display: flex;
+        height: 100%;
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        align-items: center;
+      }
+      header nav a:hover {
+        background-color: #0005;
+      }
+      header nav div.active {
+        position: relative;
+      }
+      header nav div.active::before {
+        display: block;
+        height: 2px;
+        border-radius: 1px;
+        position: absolute;
+        left: 20px;
+        bottom: 0.5em;
+        right: 20px;
+        background-color: white;
+        content: "";
+      }
+      ol {
+        max-width: 500px;
+      }
+      .main {
+        display: flex;
+        height: 100vh;
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+      .main section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <header><nav><div class="active"><a href="/">Home</a></div><div><a href="/about">About</a></div></nav></header>
+      <!--@pages/home-->
+      <section>
+        <img width="80" src="images/logo.svg"/>
+        <h1>Welcome</h1>
+        <p>You successfully create a new Jaspr site.</p>
+        <div style="height: 100px"></div>
+        <div class="counter"><button>-</button><span>0</span><button>+</button></div>
+      </section>
+      <!--/@pages/home-->
+    </div>
+  </body>
+</html>
