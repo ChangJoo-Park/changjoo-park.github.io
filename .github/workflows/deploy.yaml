@@ -1,0 +1,43 @@
+name: Deploy Jaspr App
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Setup Pages for GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+
+      # Setup Dart
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1.3
+
+      # Build Jaspr
+      - name: Build Jaspr
+        run: |
+          dart pub global activate jaspr_cli
+          jaspr build --verbose
+
+      # Upload only jaspr build output
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jaspr-build
+          path: 'build/jaspr'
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build/jaspr
