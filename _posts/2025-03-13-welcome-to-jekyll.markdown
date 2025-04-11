@@ -1,29 +1,14 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2025-03-13 18:22:27 +0900
-categories: jekyll update
+title: "첫번째 글"
+date: 2025-04-12 00:23:58 +0900
+categories: about
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
 
-Jekyll requires blog post files to be named according to the following format:
+그동안 테마를 어떤걸로 골라야할지 고민했다. [elly.town](https://elly.town)을 보고 있다가 스타일이 적은게 괜찮겠다는 생각을 했다.
 
-`YEAR-MONTH-DAY-title.MARKUP`
+하지만 너무 허옇게 나오는게 별로 맘에 들지는 않았다. 그래서 최근에 눈이 아플 때 사용하는 [nord theme](https://www.nordtheme.com)의 컬러 스킴을 반영해 보았다.
 
-Where `YEAR` is a four-digit number, `MONTH` and `DAY` are both two-digit numbers, and `MARKUP` is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+요즘은 세상이 좋아서 AI에 [main.css](/assets/css/main.css)파일을 확인하고, nord에 맞추어 라이트/다크 테마를 적용하라고 했다.
 
-Jekyll also offers powerful support for code snippets:
-
-{% highlight ruby %}
-def print_hi(name)
-  puts "Hi, #{name}"
-end
-print_hi('Tom')
-#=> prints 'Hi, Tom' to STDOUT.
-{% endhighlight %}
-
-Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most out of Jekyll. File all bugs/feature requests at [Jekyll’s GitHub repo][jekyll-gh]. If you have questions, you can ask them on [Jekyll Talk][jekyll-talk].
-
-[jekyll-docs]: https://jekyllrb.com/docs/home
-[jekyll-gh]:   https://github.com/jekyll/jekyll
-[jekyll-talk]: https://talk.jekyllrb.com/
+GitHub Pages를 이용해서 배포하고 있다. 항상 내가 고민이었던 부분은 git 명령어로 배포를 하는 것인데 이건 어떻게 방법이 없을까..
